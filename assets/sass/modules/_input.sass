@@ -1,0 +1,11 @@
+@use '../abstracts/variables'
+@use '../base/typography'
+
+input
+  @extend .text
+  border: 1px solid variables.$input-color-border
+  padding: 8px
+
+  &:focus
+    border: 1px solid variables.$input-color-border
+    outline-color: variables.$input-color-border-focus

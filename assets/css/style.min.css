@@ -19582,7 +19582,7 @@ body {
   border: 0;
 }
 
-.text--smaller, .text--small-bold, .text--small, .card-info-profession, .btn, .text--bold, .card-info-client, .text, .text--uppercase, .nav-link, .text--large-bold, .text--large, .subtitle, .card-title, .title, .display {
+.text--smaller, .text--small-bold, .text--small, .card-info-profession, .btn, .text--bold, .card-info-client, .text, input, .text--uppercase, .nav-link, .text--large-bold, .text--large, .subtitle, .card-title, .title, .display {
   font-family: Montserrat;
   font-style: normal;
 }
@@ -19617,7 +19617,7 @@ body {
   line-height: 24px;
 }
 
-.text, .text--uppercase, .nav-link {
+.text, input, .text--uppercase, .nav-link {
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -19833,6 +19833,15 @@ body {
   padding: 20px;
   margin: auto;
   max-width: 1440px;
+}
+
+input {
+  border: 1px solid #d6d6d6;
+  padding: 8px;
+}
+input:focus {
+  border: 1px solid #d6d6d6;
+  outline-color: #FB2C36;
 }
 
 /*# sourceMappingURL=style.min.css.map */
