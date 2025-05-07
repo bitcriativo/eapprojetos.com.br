@@ -5,11 +5,33 @@
   &--portfolio
     padding: 8px
 
-.card-body
-  padding: 0
-  margin: 8px 0 0 0
+    .card-body
+      padding: 0
+      margin: 8px 0 0 0
 
 .card-title
   @extend .subtitle
   font-weight: 500
   color: variables.$color-primary
+
+.card-icon
+  padding: 8px
+  font-size: 64px
+  color: variables.$color-primary
+
+.card-rate
+  display: flex
+
+.card-info
+  display: flex
+  align-items: center
+
+  > * + *
+    margin-left: 16px
+
+.card-info-client
+  @extend .text--bold
+  display: block
+
+.card-info-profession
+  @extend .text--small

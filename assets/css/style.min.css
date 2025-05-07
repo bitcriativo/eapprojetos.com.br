@@ -19582,7 +19582,7 @@ body {
   border: 0;
 }
 
-.text--smaller, .text--small-bold, .text--small, .btn, .text--bold, .text, .text--uppercase, .nav-link, .text--large-bold, .text--large, .subtitle, .card-title, .title, .display {
+.text--smaller, .text--small-bold, .text--small, .card-info-profession, .btn, .text--bold, .card-info-client, .text, .text--uppercase, .nav-link, .text--large-bold, .text--large, .subtitle, .card-title, .title, .display {
   font-family: Montserrat;
   font-style: normal;
 }
@@ -19623,7 +19623,7 @@ body {
   line-height: 24px;
 }
 
-.text--bold {
+.text--bold, .card-info-client {
   font-size: 14px;
   font-weight: 700;
   line-height: 24px;
@@ -19633,7 +19633,7 @@ body {
   text-transform: uppercase;
 }
 
-.text--small, .btn {
+.text--small, .card-info-profession, .btn {
   font-size: 12px;
   font-weight: 400;
   line-height: 24px;
@@ -19793,8 +19793,7 @@ body {
 .card--portfolio {
   padding: 8px;
 }
-
-.card-body {
+.card--portfolio .card-body {
   padding: 0;
   margin: 8px 0 0 0;
 }
@@ -19802,6 +19801,28 @@ body {
 .card-title {
   font-weight: 500;
   color: #FB2C36;
+}
+
+.card-icon {
+  padding: 8px;
+  font-size: 64px;
+  color: #FB2C36;
+}
+
+.card-rate {
+  display: flex;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+}
+.card-info > * + * {
+  margin-left: 16px;
+}
+
+.card-info-client {
+  display: block;
 }
 
 .portfolio {
