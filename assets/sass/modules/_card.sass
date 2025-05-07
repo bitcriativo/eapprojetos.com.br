@@ -18,3 +18,20 @@
   padding: 8px
   font-size: 64px
   color: variables.$color-primary
+
+.card-rate
+  display: flex
+
+.card-info
+  display: flex
+  align-items: center
+
+  > * + *
+    margin-left: 16px
+
+.card-info-client
+  @extend .text--bold
+  display: block
+
+.card-info-profession
+  @extend .text--small
