@@ -19582,12 +19582,12 @@ body {
   border: 0;
 }
 
-.text--smaller, .text--small-bold, .text--small, .card-info-profession, .card-plans .card-price span, .btn, .text--bold, .card-info-client, .text, input, .text--uppercase, .nav-link, .text--large-bold, .card-plans .card-price, .text--large, .subtitle, .card-title, .title, .display {
+.text--smaller, .text--small-bold, .text--small, .card-info-profession, .card-plans .card-price span, .btn, .text--bold, .card-info-client, .text, input, .text--uppercase, .nav-link, .text--large-bold, .card-plans .card-price, .text--large, .subtitle, .card-title, .title, .display, .section__label {
   font-family: Montserrat;
   font-style: normal;
 }
 
-.display {
+.display, .section__label {
   font-size: 50px;
   font-weight: 200;
   line-height: 64px;
@@ -19870,6 +19870,31 @@ input {
 input:focus {
   border: 1px solid #d6d6d6;
   outline-color: #FB2C36;
+}
+
+.hero__call-to-action {
+  margin: auto;
+}
+
+.hero__image {
+  position: relative;
+}
+
+.hero__image--2 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+section {
+  position: relative;
+}
+
+.section__label {
+  opacity: 30%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 /*# sourceMappingURL=style.min.css.map */
