@@ -19582,7 +19582,7 @@ body {
   border: 0;
 }
 
-.text--smaller, .text--small-bold, .text--small, .btn, .text--bold, .text, .text--uppercase, .nav-link, .text--large-bold, .text--large, .subtitle, .title, .display {
+.text--smaller, .text--small-bold, .text--small, .btn, .text--bold, .text, .text--uppercase, .nav-link, .text--large-bold, .text--large, .subtitle, .card-title, .title, .display {
   font-family: Montserrat;
   font-style: normal;
 }
@@ -19599,7 +19599,7 @@ body {
   line-height: 48px;
 }
 
-.subtitle {
+.subtitle, .card-title {
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
@@ -19774,6 +19774,34 @@ body {
 .btn-ghost:hover {
   border: 1px solid #FB2C36;
   border-radius: 0;
+}
+
+.btn-card--portfolio {
+  width: 100%;
+}
+
+.card--portfolio {
+  padding: 8px;
+}
+
+.card-body {
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+.card-title {
+  font-weight: 500;
+  color: #FB2C36;
+}
+
+.portfolio {
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  margin: auto;
+  max-width: 1440px;
 }
 
 /*# sourceMappingURL=style.min.css.map */
