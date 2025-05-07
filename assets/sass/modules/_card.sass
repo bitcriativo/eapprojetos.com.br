@@ -1,0 +1,15 @@
+@use '../abstracts/variables'
+@use '../base/typography'
+
+.card
+  &--portfolio
+    padding: 8px
+
+.card-body
+  padding: 0
+  margin: 8px 0 0 0
+
+.card-title
+  @extend .subtitle
+  font-weight: 500
+  color: variables.$color-primary
