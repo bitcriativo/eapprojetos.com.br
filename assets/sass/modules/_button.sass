@@ -1,0 +1,27 @@
+@use 'sass:color'
+@use '../abstracts/variables'
+@use '../base/typography'
+
+.btn
+  @extend .text--small
+  text-transform: uppercase
+
+.btn-primary
+  background-color: variables.$color-primary
+  border-color: variables.$color-primary
+  border-radius: 0
+
+  &:hover
+    background-color: darken(variables.$color-primary, 30%)
+    border-color: darken(variables.$color-primary, 30%)
+
+  &:active
+    background-color: darken(variables.$color-primary, 10%) !important
+    border-color: darken(variables.$color-primary, 10%) !important
+
+.btn-ghost
+  color: variables.$color-primary
+
+  &:hover
+    border: 1px solid variables.$color-primary
+    border-radius: 0

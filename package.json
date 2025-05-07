@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "sass:build": "sass ./assets/sass/app.sass:./assets/css/style.min.css --style compressed",
-    "sass:watch": "sass --watch ./assets/sass/app.sass:./assets/css/style.css",
+    "sass:watch": "sass --watch ./assets/sass/app.sass:./assets/css/style.min.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +21,8 @@
   "description": "",
   "devDependencies": {
     "sass": "^1.87.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.6"
   }
 }

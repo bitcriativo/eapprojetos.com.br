@@ -1,0 +1,52 @@
+%font-base
+  font-family: Montserrat
+  font-style: normal
+
+@mixin font-structure($size, $weight, $line-height)
+  font-size: $size
+  font-weight: $weight
+  line-height: $line-height
+
+.display
+  @extend %font-base
+  @include font-structure(50px, 200 , 64px)
+
+.title
+  @extend %font-base
+  @include font-structure(34px, 400 , 48px)
+
+.subtitle
+  @extend %font-base
+  @include font-structure(24px, 400 , 32px)
+
+.text--large
+  @extend %font-base
+  @include font-structure(16px, 400 , 24px)
+
+.text--large-bold
+  @extend %font-base
+  @include font-structure(16px, 700 , 24px)
+
+.text
+  @extend %font-base
+  @include font-structure(18px, 400 , 24px)
+
+.text--bold
+  @extend %font-base
+  @include font-structure(14px, 700 , 24px)
+
+.text--uppercase
+  @extend .text
+  text-transform: uppercase
+
+.text--small
+  @extend %font-base
+  @include font-structure(12px, 400 , 24px)
+
+.text--small-bold
+  @extend %font-base
+  @include font-structure(12px, 700 , 24px)
+
+.text--smaller
+  @extend %font-base
+  @include font-structure(12px, 700 , 24px)
