@@ -19768,6 +19768,16 @@ body {
   border-color: rgb(239.4604651163, 4.5395348837, 15.888372093) !important;
 }
 
+.btn-outline {
+  border: 1px solid #FB2C36;
+  color: #FB2C36;
+  border-radius: 0;
+}
+.btn-outline:hover {
+  background-color: #FB2C36;
+  color: #ECF0F1;
+}
+
 .btn-ghost {
   color: #FB2C36;
 }
