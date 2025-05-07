@@ -19793,14 +19793,19 @@ body {
 .card--portfolio {
   padding: 8px;
 }
-
-.card-body {
+.card--portfolio .card-body {
   padding: 0;
   margin: 8px 0 0 0;
 }
 
 .card-title {
   font-weight: 500;
+  color: #FB2C36;
+}
+
+.card-icon {
+  padding: 8px;
+  font-size: 64px;
   color: #FB2C36;
 }
 
