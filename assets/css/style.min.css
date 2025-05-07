@@ -19582,7 +19582,7 @@ body {
   border: 0;
 }
 
-.text--smaller, .text--small-bold, .text--small, .card-info-profession, .btn, .text--bold, .card-info-client, .text, input, .text--uppercase, .nav-link, .text--large-bold, .text--large, .subtitle, .card-title, .title, .display {
+.text--smaller, .text--small-bold, .text--small, .card-info-profession, .card-plans .card-price span, .btn, .text--bold, .card-info-client, .text, input, .text--uppercase, .nav-link, .text--large-bold, .card-plans .card-price, .text--large, .subtitle, .card-title, .title, .display {
   font-family: Montserrat;
   font-style: normal;
 }
@@ -19611,7 +19611,7 @@ body {
   line-height: 24px;
 }
 
-.text--large-bold {
+.text--large-bold, .card-plans .card-price {
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
@@ -19633,7 +19633,7 @@ body {
   text-transform: uppercase;
 }
 
-.text--small, .card-info-profession, .btn {
+.text--small, .card-info-profession, .card-plans .card-price span, .btn {
   font-size: 12px;
   font-weight: 400;
   line-height: 24px;
@@ -19790,6 +19790,10 @@ body {
   width: 100%;
 }
 
+.btn-card-plans {
+  width: 100%;
+}
+
 .card--portfolio {
   padding: 8px;
 }
@@ -19823,6 +19827,30 @@ body {
 
 .card-info-client {
   display: block;
+}
+
+.card-plans {
+  text-align: center;
+  border-bottom: 1px border #c6c6c6;
+}
+.card-features {
+  text-align: start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.card-features li {
+  display: flex;
+  align-items: start;
+}
+.card-features i {
+  display: block;
+  margin-top: 4px;
+  color: #41965d;
+}
+.card-features span {
+  display: block;
+  margin-left: 8px;
 }
 
 .portfolio {
