@@ -20180,10 +20180,9 @@ section {
 .section {
   align-items: center;
 }
-@media (max-width: 768px) {
+@media (min-width: 992px) {
   .section {
     min-height: 100dvh;
-    padding-top: 128px;
   }
 }
 
