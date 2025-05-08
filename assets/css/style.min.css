@@ -20178,9 +20178,17 @@ section {
 }
 
 .section {
-  min-height: 100dvh;
   align-items: center;
-  padding-top: 128px;
+}
+@media (max-width: 768px) {
+  .section {
+    min-height: 100dvh;
+    padding-top: 128px;
+  }
+}
+
+.section__about-us__img {
+  width: 100%;
 }
 
 .section__label {
@@ -20193,10 +20201,6 @@ section {
   .section__label {
     position: relative;
   }
-}
-
-.section__about-us {
-  padding: 256px 0;
 }
 
 .card-features__icon {

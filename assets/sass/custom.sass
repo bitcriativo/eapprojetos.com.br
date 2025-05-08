@@ -1,6 +1,6 @@
 @use 'base/typography'
 @use 'abstracts/variables'
-@use 'mixins/breakpoints' as m
+@use 'mixins/breakpoints'
 
 .hero__call-to-action
   margin: auto
@@ -21,9 +21,14 @@ section
   position: relative
 
 .section
-  min-height: 100dvh
   align-items: center
-  padding-top: 128px
+
+  @include breakpoints.responsive-max('md')
+    min-height: 100dvh
+    padding-top: 128px
+
+.section__about-us__img
+  width: 100%
 
 .section__label
   @extend .display
@@ -32,11 +37,8 @@ section
   bottom: 0
   left: 0
 
-  @include m.responsive-max('lg')
+  @include breakpoints.responsive-max('lg')
     position: relative
-
-.section__about-us
-  padding: 256px 0
 
 .card-features__icon
   @extend .display
