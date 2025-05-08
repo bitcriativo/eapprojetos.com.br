@@ -1,52 +1,101 @@
+@use '../mixins/breakpoints'
+
 %font-base
-  font-family: Montserrat
+  font-family: 'Montserrat', sans-serif
   font-style: normal
+
+$font-scale: (
+  'base': 1,
+  'sm': 1.05,
+  'md': 1.1,
+  'lg': 1.15,
+  'xl': 1.2
+)
 
 @mixin font-structure($size, $weight, $line-height)
   font-size: $size
   font-weight: $weight
   line-height: $line-height
 
+  @include breakpoints.responsive-min('sm')
+    font-size: $size * map-get($font-scale, 'sm')
+    line-height: $line-height * map-get($font-scale, 'sm')
+
+  @include breakpoints.responsive-min('md')
+    font-size: $size * map-get($font-scale, 'md')
+    line-height: $line-height * map-get($font-scale, 'md')
+
+  @include breakpoints.responsive-min('lg')
+    font-size: $size * map-get($font-scale, 'lg')
+    line-height: $line-height * map-get($font-scale, 'lg')
+
+  @include breakpoints.responsive-min('xl')
+    font-size: $size * map-get($font-scale, 'xl')
+    line-height: $line-height * map-get($font-scale, 'xl')
+
 .display
   @extend %font-base
-  @include font-structure(50px, 200 , 64px)
+  @include font-structure(50px, 200, 64px)
 
 .title
   @extend %font-base
-  @include font-structure(34px, 400 , 48px)
+  @include font-structure(34px, 400, 48px)
 
 .subtitle
   @extend %font-base
-  @include font-structure(24px, 400 , 32px)
+  @include font-structure(24px, 400, 32px)
 
 .text--large
   @extend %font-base
-  @include font-structure(16px, 400 , 24px)
+  @include font-structure(16px, 400, 24px)
 
 .text--large-bold
   @extend %font-base
-  @include font-structure(16px, 700 , 24px)
+  @include font-structure(16px, 700, 24px)
 
 .text
   @extend %font-base
-  @include font-structure(18px, 400 , 24px)
+  @include font-structure(14px, 400, 20px) // Ajustado para melhor legibilidade
 
 .text--bold
   @extend %font-base
-  @include font-structure(14px, 700 , 24px)
+  @include font-structure(14px, 700, 20px) // Ajustado para combinar com .text
 
 .text--uppercase
   @extend .text
   text-transform: uppercase
+  letter-spacing: 0.05em // Melhor legibilidade para texto em maiúsculas
 
 .text--small
   @extend %font-base
-  @include font-structure(12px, 400 , 24px)
+  @include font-structure(12px, 400, 18px) // Ajustado line-height
+
+.text--small-uppercase
+  @extend .text--small
+  text-transform: uppercase
+  letter-spacing: 0.05em
 
 .text--small-bold
   @extend %font-base
-  @include font-structure(12px, 700 , 24px)
+  @include font-structure(12px, 700, 18px) // Ajustado line-height
 
 .text--smaller
   @extend %font-base
-  @include font-structure(12px, 700 , 24px)
+  @include font-structure(10px, 400, 16px)
+
+.text-center
+  text-align: center
+
+.text-right
+  text-align: right
+
+.text-left
+  text-align: left
+
+.text-nowrap
+  white-space: nowrap
+
+.text-truncate
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
