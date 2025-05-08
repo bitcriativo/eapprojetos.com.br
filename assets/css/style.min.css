@@ -19582,12 +19582,12 @@ body {
   border: 0;
 }
 
-.text--smaller, .text--small-bold, .text--small, .card-info-profession, .card-plans .card-price span, .btn, .text--bold, .card-info-client, .text, input, .text--uppercase, .nav-link, .text--large-bold, .card-plans .card-price, .text--large, .subtitle, .card-title, .title, .display, .section__label {
+.text--smaller, .text--small-bold, .text--small, .card-info-profession, .card-plans .card-price span, .btn, .text--bold, .card-info-client, .text, .card-features__description, input, .text--uppercase, .nav-link, .text--large-bold, .card-plans .card-price, .text--large, .card-features__title, .subtitle, .card-title, .title, .display, .section__label, .card-features__icon {
   font-family: Montserrat;
   font-style: normal;
 }
 
-.display, .section__label {
+.display, .section__label, .card-features__icon {
   font-size: 50px;
   font-weight: 200;
   line-height: 64px;
@@ -19605,7 +19605,7 @@ body {
   line-height: 32px;
 }
 
-.text--large {
+.text--large, .card-features__title {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -19617,7 +19617,7 @@ body {
   line-height: 24px;
 }
 
-.text, input, .text--uppercase, .nav-link {
+.text, .card-features__description, input, .text--uppercase, .nav-link {
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -19899,6 +19899,12 @@ section {
 
 .section__about-us {
   margin: 256px 0;
+}
+
+.card-features__icon {
+  margin-top: -4px;
+  margin-right: 8px;
+  color: #FB2C36;
 }
 
 /*# sourceMappingURL=style.min.css.map */

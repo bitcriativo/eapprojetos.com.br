@@ -1,4 +1,5 @@
 @use 'base/typography'
+@use 'abstracts/variables'
 
 .hero__call-to-action
   margin: auto
@@ -23,3 +24,15 @@ section
 
 .section__about-us
   margin: 256px 0
+
+.card-features__icon
+  @extend .display
+  margin-top: -4px
+  margin-right: 8px
+  color: variables.$color-primary
+
+.card-features__title
+  @extend .text--large
+
+.card-features__description
+  @extend .text
