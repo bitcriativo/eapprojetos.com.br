@@ -19582,7 +19582,7 @@ body {
   border: 0;
 }
 
-.text--smaller, .text--small-bold, .text--small, .card-info-profession, .card-plans .card-price span, .btn, .text--bold, .card-info-client, .text, .card-features__description, input, .text--uppercase, .nav-link, .text--large-bold, .card-plans .card-price, .text--large, .card-features__title, .subtitle, .card-title, .title, .display, .section__label, .card-features__icon {
+.text--smaller, .text--small-bold, .text--small, .card-info-profession, .card-plans .card-price span, .btn, .text--bold, .card-info-client, .text, .card-features__description, .section__portfolio__description, input, .text--uppercase, .nav-link, .text--large-bold, .card-plans .card-price, .text--large, .card-features__title, .subtitle, .card-title, .title, .section__portfolio__title, .display, .section__label, .card-features__icon {
   font-family: Montserrat;
   font-style: normal;
 }
@@ -19593,7 +19593,7 @@ body {
   line-height: 64px;
 }
 
-.title {
+.title, .section__portfolio__title {
   font-size: 34px;
   font-weight: 400;
   line-height: 48px;
@@ -19617,7 +19617,7 @@ body {
   line-height: 24px;
 }
 
-.text, .card-features__description, input, .text--uppercase, .nav-link {
+.text, .card-features__description, .section__portfolio__description, input, .text--uppercase, .nav-link {
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -19890,6 +19890,10 @@ section {
   position: relative;
 }
 
+.section {
+  margin: 256px 0;
+}
+
 .section__label {
   opacity: 30%;
   position: absolute;
@@ -19898,13 +19902,17 @@ section {
 }
 
 .section__about-us {
-  margin: 256px 0;
+  padding: 256px 0;
 }
 
 .card-features__icon {
   margin-top: -4px;
   margin-right: 8px;
   color: #FB2C36;
+}
+
+.section__portfolio {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.min.css.map */
