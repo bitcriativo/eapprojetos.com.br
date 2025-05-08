@@ -5,6 +5,7 @@
   font-style: normal
 
 $font-scale: (
+  'xs': 0.8,
   'base': 1,
   'sm': 1.05,
   'md': 1.1,
@@ -13,9 +14,9 @@ $font-scale: (
 )
 
 @mixin font-structure($size, $weight, $line-height)
-  font-size: $size
+  font-size: $size * map-get($font-scale, 'xs')
   font-weight: $weight
-  line-height: $line-height
+  line-height: $line-height * map-get($font-scale, 'xs')
 
   @include breakpoints.responsive-min('sm')
     font-size: $size * map-get($font-scale, 'sm')
