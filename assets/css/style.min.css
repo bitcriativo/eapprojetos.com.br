@@ -19582,12 +19582,12 @@ body {
   border: 0;
 }
 
-.text--smaller, .text--small-bold, .text--small, .card-info-profession, .card-plans .card-price span, .btn, .text--bold, .card-info-client, .text, .card-features__description, .section__portfolio__description, .section__header__description, input, .text--uppercase, .nav-link, .text--large-bold, .card-plans .card-price, .text--large, .card-features__title, .subtitle, .card-title, .title, .section__portfolio__title, .display, .section__label, .card-features__icon, .section__header__title {
+.text--smaller, .text--small-bold, .text--small, .card-info-profession, .card-plans .card-price span, .btn, .text--bold, .footer__section__title, .card-info-client, .text, .card-features__description, .section__portfolio__description, .section__header__description, .footer__description, input, .input, .text--uppercase, .nav-link, .text--large-bold, .card-plans .card-price, .text--large, .card-features__title, .subtitle, .card-title, .title, .section__portfolio__title, .display, .section__label, .card-features__icon, .section__header__title, .footer__title {
   font-family: Montserrat;
   font-style: normal;
 }
 
-.display, .section__label, .card-features__icon, .section__header__title {
+.display, .section__label, .card-features__icon, .section__header__title, .footer__title {
   font-size: 50px;
   font-weight: 200;
   line-height: 64px;
@@ -19617,13 +19617,13 @@ body {
   line-height: 24px;
 }
 
-.text, .card-features__description, .section__portfolio__description, .section__header__description, input, .text--uppercase, .nav-link {
+.text, .card-features__description, .section__portfolio__description, .section__header__description, .footer__description, input, .input, .text--uppercase, .nav-link {
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
 }
 
-.text--bold, .card-info-client {
+.text--bold, .footer__section__title, .card-info-client {
   font-size: 14px;
   font-weight: 700;
   line-height: 24px;
@@ -19872,6 +19872,15 @@ input:focus {
   outline-color: #FB2C36;
 }
 
+.input {
+  border: 1px solid #d6d6d6 !important;
+  padding: 8px !important;
+}
+.input:focus {
+  border: 1px solid #d6d6d6 !important;
+  outline-color: #FB2C36 !important;
+}
+
 .hero__call-to-action {
   margin: auto;
 }
@@ -19891,7 +19900,9 @@ section {
 }
 
 .section {
-  margin: 256px 0;
+  min-height: 100dvh;
+  align-items: center;
+  padding-top: 128px;
 }
 
 .section__label {
@@ -19899,6 +19910,11 @@ section {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+@media (max-width: 992px) {
+  .section__label {
+    position: relative;
+  }
 }
 
 .section__about-us {
@@ -19917,6 +19933,37 @@ section {
 
 .section__header {
   text-align: center;
+}
+
+.footer {
+  background-color: #101828;
+  color: #ECF0F1;
+}
+
+.footer__header {
+  text-align: center;
+}
+
+.newsletter__btn {
+  width: 100%;
+}
+
+.newsletter__input {
+  width: 100%;
+}
+
+.footer__social_networks__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer__social_networks__list a {
+  text-decoration: none;
+  color: #ECF0F1;
+}
+.footer__social_networks__list a:hover {
+  text-decoration: underline;
+  text-decoration-color: #FB2C36;
 }
 
 /*# sourceMappingURL=style.min.css.map */

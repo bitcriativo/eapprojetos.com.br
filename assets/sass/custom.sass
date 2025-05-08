@@ -1,5 +1,6 @@
 @use 'base/typography'
 @use 'abstracts/variables'
+@use 'mixins/breakpoints' as m
 
 .hero__call-to-action
   margin: auto
@@ -16,7 +17,9 @@ section
   position: relative
 
 .section
-  margin: 256px 0
+  min-height: 100dvh
+  align-items: center
+  padding-top: 128px
 
 .section__label
   @extend .display
@@ -24,6 +27,9 @@ section
   position: absolute
   bottom: 0
   left: 0
+
+  @include m.responsive-max('lg')
+    position: relative
 
 .section__about-us
   padding: 256px 0
@@ -57,3 +63,38 @@ section
 
 .section__header__description
   @extend .text
+
+.footer
+  background-color: variables.$color-secondary
+  color: variables.$bg-light
+
+.footer__header
+  text-align: center
+
+.footer__title
+  @extend .display
+
+.footer__description
+  @extend .text
+
+.footer__section__title
+  @extend .text--bold
+
+.newsletter__btn
+  width: 100%
+
+.newsletter__input
+  width: 100%
+
+.footer__social_networks__list
+  list-style: none
+  margin: 0
+  padding: 0
+
+  a
+    text-decoration: none
+    color: variables.$color-light
+
+    &:hover
+      text-decoration: underline
+      text-decoration-color: variables.$color-primary
