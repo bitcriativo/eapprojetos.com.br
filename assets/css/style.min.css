@@ -20180,6 +20180,8 @@ input:focus {
 
 section {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .section {
@@ -20213,7 +20215,6 @@ section {
   color: #FB2C36;
 }
 
-/** Text Custom **/
 .section__portfolio {
   text-align: center;
 }
