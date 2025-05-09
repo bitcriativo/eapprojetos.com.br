@@ -9,3 +9,12 @@ input
   &:focus
     border: 1px solid variables.$input-color-border
     outline-color: variables.$input-color-border-focus
+
+.input
+  @extend .text
+  border: 1px solid variables.$input-color-border !important
+  padding: 8px !important
+
+  &:focus
+    border: 1px solid variables.$input-color-border !important
+    outline-color: variables.$input-color-border-focus !important

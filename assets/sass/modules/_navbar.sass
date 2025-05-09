@@ -3,6 +3,8 @@
 @use '../base/typography' as t
 @use '../mixins/breakpoints'
 
+$resolution-collapsed-navbar: 'lg'
+
 @mixin nav-list-collapsed
   position: absolute
   width: 1px
@@ -28,7 +30,10 @@
       width: 100%
 
 .navbar
-  padding: 8px 32px
+  padding: 8px
+
+  @include breakpoints.responsive-min(sm)
+    padding: 8px 32px
 
   @include breakpoints.responsive-max(md)
     justify-content: initial
@@ -36,7 +41,7 @@
     text-align: center
 
 .navbar-container
-  @include breakpoints.responsive-max(md)
+  @include breakpoints.responsive-max($resolution-collapsed-navbar)
     display: flex
     justify-content: space-between
     width: 100%
@@ -44,7 +49,7 @@
 .navbar-toggler
   display: block
 
-  @include breakpoints.responsive-min(md)
+  @include breakpoints.responsive-min($resolution-collapsed-navbar)
     display: none
 
 .navbar-list
@@ -52,13 +57,13 @@
   flex-grow: 1
   justify-content: space-between
 
-  @include breakpoints.responsive-max(md)
+  @include breakpoints.responsive-max($resolution-collapsed-navbar)
     padding: 16px 0px
     flex-direction: column
     @include nav-list-open
 
     &.collapsed
-      @include breakpoints.responsive-max(md)
+      @include breakpoints.responsive-max($resolution-collapsed-navbar)
         @include nav-list-collapsed
 
     > * + *
@@ -68,7 +73,7 @@
   margin: auto
   flex-direction: row
 
-  @include breakpoints.responsive-min(md)
+  @include breakpoints.responsive-min($resolution-collapsed-navbar)
     > * + *
       margin-left: 0.5rem
 
@@ -80,14 +85,14 @@
           color: variables.$color-primary
 
 .nav-link
-  @extend .text--uppercase
+  @extend .text--small-uppercase
 
 .nav-item.active
   .nav-link
     color: variables.$color-primary
 
 .nav-btns
-  @include breakpoints.responsive-max(md)
+  @include breakpoints.responsive-max($resolution-collapsed-navbar)
     display: flex
     flex-direction: column
 
