@@ -51,17 +51,22 @@
     </nav>
 
     <!--Main Start-->
-    <div class="container">
+    <div class="container my-5">
       <header class="text-center my-5 py-5">
-        <h1>Blog</h1>
-        <p>but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with</p>
+        <h1 class="display text-primary">Blog</h1>
+        <p class="text">
+          <span class="text--large-bold">Dicas práticas, insights e novidades do mundo da tecnologia para pequenos negócios.</span>
+          <br/>
+          Aqui no nosso blog, você encontra conteúdos simples e objetivos sobre ferramentas, segurança digital, produtividade,
+          automações e tudo o que pode ajudar sua empresa a crescer com apoio da tecnologia — sem complicação e sem “tecniquês”.
+        </p>
       </header>
       <div class="row">
-        <aside class="col-3">
+        <aside class="col-12 col-md-3">
           <input type="text" placeholder="pesquisar ..."/>
-          <div class="posts__categories">
+          <div class="posts__categories mt-4">
             <span class="text--large-bold">Categorias</span>
-            <ul class="posts__categories__list">
+            <ul class="posts__categories__list d-none">
               <li>
                 <a href="#">Tecnologias</a>
               </li>
@@ -73,36 +78,44 @@
               </li>
             </ul>
           </div>
-          <div class="posts__tags">
+          <div class="posts__tags mt-4">
             <span class="text--large-bold">Tags</span>
-            <div class="posts__tags__list">
+            <div class="posts__tags__list d-none">
               <div class="posts__tag">Tecnologia</div>
               <div class="posts__tag">Emprendedorismo</div>
             </div>
           </div>
-          <div class="posts__instagram row">
-            <div class="col-3 mt-2">
-              <img src="../assets/image/posts_instagram_1.png" />
-            </div>
-            <div class="col-3 mt-2">
-              <img src="../assets/image/posts_instagram_1.png" />
-            </div>
-            <div class="col-3 mt-2">
-              <img src="../assets/image/posts_instagram_1.png" />
-            </div>
-            <div class="col-3 mt-2">
-              <img src="../assets/image/posts_instagram_1.png" />
-            </div>
-            <div class="col-3 mt-2">
-              <img src="../assets/image/posts_instagram_1.png" />
-            </div>
-            <div class="col-3 mt-2">
-              <img src="../assets/image/posts_instagram_1.png" />
+          <div class="posts__instagram row mt-4">
+            <span class="text--large-bold">Instagram</span>
+            <div class="row d-none">
+              <div class="col-3 mt-2">
+                <img src="../assets/image/posts_instagram_1.png" />
+              </div>
+              <div class="col-3 mt-2">
+                <img src="../assets/image/posts_instagram_1.png" />
+              </div>
+              <div class="col-3 mt-2">
+                <img src="../assets/image/posts_instagram_1.png" />
+              </div>
+              <div class="col-3 mt-2">
+                <img src="../assets/image/posts_instagram_1.png" />
+              </div>
+              <div class="col-3 mt-2">
+                <img src="../assets/image/posts_instagram_1.png" />
+              </div>
+              <div class="col-3 mt-2">
+                <img src="../assets/image/posts_instagram_1.png" />
+              </div>
             </div>
           </div>
         </aside>
 
-        <div class="col-9">
+        <div class="col-12 col-md-9 text-center mt-5 mt-md-0">
+            <h2 class="display">Não possuí posts</h2>
+            <a href="#" class="btn btn-primary mt-5">Voltar para o início</a>
+        </div>
+
+        <div class="col-9 d-none">
           <main class="row">
             <!--POSTS Start-->
             <div class="col-6">
