@@ -20154,6 +20154,13 @@ input:focus {
   outline-color: #FB2C36 !important;
 }
 
+.form__login {
+  background: white;
+}
+.form__login > * + * {
+  margin-top: 16px;
+}
+
 .hero__call-to-action {
   margin: auto;
 }
@@ -20245,6 +20252,11 @@ section {
 .footer__social_networks__list a:hover {
   text-decoration: underline;
   text-decoration-color: #FB2C36;
+}
+
+.form__login {
+  border: 1px solid #101828;
+  padding: 16px;
 }
 
 /*# sourceMappingURL=style.min.css.map */
