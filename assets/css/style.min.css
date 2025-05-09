@@ -19995,7 +19995,7 @@ body {
 }
 
 .navbar-nav {
-  margin: auto;
+  margin-left: auto;
   flex-direction: row;
 }
 @media (min-width: 992px) {
