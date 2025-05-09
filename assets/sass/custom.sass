@@ -1,0 +1,109 @@
+@use 'base/typography'
+@use 'abstracts/variables'
+@use 'mixins/breakpoints'
+
+.hero__call-to-action
+  margin: auto
+
+.hero__image
+  position: relative
+
+.hero__image--1
+  width: 100%
+
+.hero__image--2
+  position: absolute
+  top: 50%
+  left: 0
+  width: 100%
+
+section
+  position: relative
+
+.section
+  align-items: center
+
+  @include breakpoints.responsive-min('lg')
+    min-height: 100dvh
+
+.section__about-us__img
+  width: 100%
+
+.section__label
+  @extend .display
+  opacity: 30%
+  position: absolute
+  bottom: 0
+  left: 0
+
+  @include breakpoints.responsive-max('lg')
+    position: relative
+
+.card-features__icon
+  @extend .display
+  margin-top: -4px
+  margin-right: 8px
+  color: variables.$color-primary
+
+.card-features__title
+  @extend .text--large
+
+.card-features__description
+  @extend .text
+
+.section__portfolio
+  text-align: center
+
+.section__portfolio__title
+  @extend .title
+
+.section__portfolio__description
+  @extend .text
+
+.section__header
+  text-align: center
+
+.section__header__title
+  @extend .display
+
+.section__header__description
+  @extend .text
+
+.footer
+  background-color: variables.$color-secondary
+  color: variables.$bg-light
+
+.footer__header
+  text-align: center
+
+.footer__title
+  @extend .display
+
+.footer__description
+  @extend .text
+
+.footer__section__title
+  @extend .text--bold
+
+.newsletter__btn
+  width: 100%
+
+.newsletter__input
+  width: 100%
+
+.footer__social_networks__list
+  list-style: none
+  margin: 0
+  padding: 0
+
+  a
+    text-decoration: none
+    color: variables.$color-light
+
+    &:hover
+      text-decoration: underline
+      text-decoration-color: variables.$color-primary
+
+.form__login
+  border: 1px solid variables.$color-secondary
+  padding: 16px
