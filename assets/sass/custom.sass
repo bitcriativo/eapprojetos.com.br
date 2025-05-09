@@ -2,6 +2,10 @@
 @use 'abstracts/variables'
 @use 'mixins/breakpoints'
 
+/** Text Custom **/
+.text-primary
+  color: variables.$color-primary !important
+
 .hero__call-to-action
   margin: auto
 
@@ -19,6 +23,8 @@
 
 section
   position: relative
+  display: flex
+  justify-content: center
 
 .section
   align-items: center
