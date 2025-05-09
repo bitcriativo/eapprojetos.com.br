@@ -19582,36 +19582,36 @@ body {
   border: 0;
 }
 
-.text--smaller, .text--small-bold, .text--small, .card-info-profession, .card-plans .card-price span, .btn, .text--small-uppercase, .nav-link, .text--bold, .footer__section__title, .card-info-client, .text, .card-features__description, .section__portfolio__description, .section__header__description, .footer__description, input, .input, .text--uppercase, .text--large-bold, .card-plans .card-price, .text--large, .card-features__title, .subtitle, .card-title, .title, .section__portfolio__title, .display, .section__label, .card-features__icon, .section__header__title, .footer__title {
+.text--smaller, .text--small-bold, .text--small, .card-info-profession, .card-plans .card-price span, .btn, .text--small-uppercase, .nav-link, .text--bold, .footer__section__title, .card-info-client, .text, .card-features__description, .section__portfolio__description, .section__header__description, .footer__description, input, .input, .text--uppercase, .text--large-bold, .card-plans .card-price, .text--large, .card-features__title, .subtitle, .card-title, .title, .section__portfolio__title, .display, .status_code, .section__label, .card-features__icon, .section__header__title, .footer__title {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
 }
 
-.display, .section__label, .card-features__icon, .section__header__title, .footer__title {
+.display, .status_code, .section__label, .card-features__icon, .section__header__title, .footer__title {
   font-size: 40px;
   font-weight: 200;
   line-height: 51.2px;
 }
 @media (min-width: 576px) {
-  .display, .section__label, .card-features__icon, .section__header__title, .footer__title {
+  .display, .status_code, .section__label, .card-features__icon, .section__header__title, .footer__title {
     font-size: 52.5px;
     line-height: 67.2px;
   }
 }
 @media (min-width: 768px) {
-  .display, .section__label, .card-features__icon, .section__header__title, .footer__title {
+  .display, .status_code, .section__label, .card-features__icon, .section__header__title, .footer__title {
     font-size: 55px;
     line-height: 70.4px;
   }
 }
 @media (min-width: 992px) {
-  .display, .section__label, .card-features__icon, .section__header__title, .footer__title {
+  .display, .status_code, .section__label, .card-features__icon, .section__header__title, .footer__title {
     font-size: 57.5px;
     line-height: 73.6px;
   }
 }
 @media (min-width: 1200px) {
-  .display, .section__label, .card-features__icon, .section__header__title, .footer__title {
+  .display, .status_code, .section__label, .card-features__icon, .section__header__title, .footer__title {
     font-size: 60px;
     line-height: 76.8px;
   }
@@ -20288,6 +20288,11 @@ section {
   padding: 8px;
   background-color: #FB2C36;
   color: #ECF0F1;
+}
+
+.status_code {
+  font-size: 128px;
+  margin-bottom: 32px;
 }
 
 /*# sourceMappingURL=style.min.css.map */
