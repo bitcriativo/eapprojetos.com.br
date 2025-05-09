@@ -19567,6 +19567,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/** Border **/
 body {
   background-color: #ECF0F1;
 }
@@ -20137,20 +20138,20 @@ body {
 }
 
 input {
-  border: 1px solid #d6d6d6;
+  border: 1px solid #cccccc;
   padding: 8px;
 }
 input:focus {
-  border: 1px solid #d6d6d6;
+  border: 1px solid #cccccc;
   outline-color: #FB2C36;
 }
 
 .input {
-  border: 1px solid #d6d6d6 !important;
+  border: 1px solid #cccccc !important;
   padding: 8px !important;
 }
 .input:focus {
-  border: 1px solid #d6d6d6 !important;
+  border: 1px solid #cccccc !important;
   outline-color: #FB2C36 !important;
 }
 
@@ -20255,11 +20256,8 @@ section {
 }
 
 .form__login {
-  border: 1px solid #101828;
+  border: 1px solid #dfe3e4;
   padding: 16px;
-}
-
-.form__login {
   background: white;
 }
 .form__login > * + * {
