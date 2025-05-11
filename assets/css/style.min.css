@@ -20237,6 +20237,12 @@ section {
   text-decoration-color: #FB2C36;
 }
 
+.section {
+  min-height: 100dvh;
+  align-items: start;
+  padding: 210px 0;
+}
+
 /** Section Hero **/
 .section__hero {
   height: calc(100dvh - 90px);
