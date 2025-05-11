@@ -2,25 +2,6 @@
 @use 'abstracts/variables'
 @use 'mixins/breakpoints'
 
-/** Text Custom **/
-.text-primary
-  color: variables.$color-primary !important
-
-.hero__call-to-action
-  margin: auto
-
-.hero__image
-  position: relative
-
-.hero__image--1
-  width: 100%
-
-.hero__image--2
-  position: absolute
-  top: 50%
-  left: 0
-  width: 100%
-
 section
   position: relative
   display: flex
@@ -31,9 +12,6 @@ section
 
   @include breakpoints.responsive-min('lg')
     min-height: 100dvh
-
-.section__about-us__img
-  width: 100%
 
 .section__label
   @extend .display
@@ -55,15 +33,6 @@ section
   @extend .text--large
 
 .card-features__description
-  @extend .text
-
-.section__portfolio
-  text-align: center
-
-.section__portfolio__title
-  @extend .title
-
-.section__portfolio__description
   @extend .text
 
 .section__header
