@@ -91,5 +91,9 @@ module.exports = {
       directory: path.join(__dirname, 'dist'),
     },
     port: 8000,
+    open: true,
+    liveReload: true,
+    hot: false,
+    watchFiles: ['src/**/*']
   },
 }

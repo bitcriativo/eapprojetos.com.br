@@ -1,0 +1,30 @@
+@use '../abstracts/variables'
+@use '../mixins/breakpoints'
+
+.card-avatar
+  border: 1px solid variables.$color-primary
+  max-width: auto
+  padding: 16px
+
+  @include breakpoints.responsive-min('md')
+    position: fixed
+    max-width: 200px
+
+  @include breakpoints.responsive-min('lg')
+    max-width: 260px
+
+  @include breakpoints.responsive-min('xl')
+    max-width: 300px
+    left: 32px
+
+.card-avatar__img
+  width: 100%
+
+.card-avatar__link_social_network
+  border: 1px solid variables.$color-primary
+  width: 48px
+  height: 48px
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: 32px
