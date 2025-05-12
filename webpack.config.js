@@ -1,16 +1,17 @@
-const path = require('path')
-const fs = require('fs')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const fs = require('fs');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+require('dotenv').config();
 
-function getHtmlFiles(dir, fileList = [], baseDir = dir) {
+function getEjsFiles(dir, fileList = [], baseDir = dir) {
   const files = fs.readdirSync(dir);
   files.forEach(file => {
     const fullPath = path.join(dir, file);
     const stat = fs.statSync(fullPath);
     if (stat.isDirectory()) {
-      getHtmlFiles(fullPath, fileList, baseDir);
-    } else if (file.endsWith('.html')) {
+      getEjsFiles(fullPath, fileList, baseDir);
+    } else if (file.endsWith('.ejs')) {
       const relativePath = path.relative(baseDir, fullPath);
       fileList.push(relativePath);
     }
@@ -18,9 +19,7 @@ function getHtmlFiles(dir, fileList = [], baseDir = dir) {
   return fileList;
 }
 
-const htmlFiles = getHtmlFiles(path.resolve(__dirname, 'src'));
-
-require('dotenv').config()
+const ejsFiles = getEjsFiles(path.resolve(__dirname, 'src'));
 
 module.exports = {
   mode: process.env.NODE_ENV ?? 'development',
@@ -29,28 +28,20 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true
+    clean: true,
   },
   module: {
     rules: [
       {
-        test: /\.(html)$/,
+        test: /\.ejs$/,
         use: [
           {
-            loader: 'html-loader',
+            loader: 'ejs-loader',
             options: {
-              sources: {
-                list: [
-                  {
-                    tag: 'img',
-                    attribute: 'src',
-                    type: 'src',
-                  },
-                ],
-              },
-            },
-          },
-        ],
+              esModule: false
+            }
+          }
+        ]
       },
       {
         test: /\.css$/i,
@@ -76,10 +67,11 @@ module.exports = {
     }
   ],
   plugins: [
-    ...htmlFiles.map(file => new HtmlWebpackPlugin({
+    ...ejsFiles.map(file => new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', file),
-      filename: file,
-      inject: 'body'
+      filename: file.replace(/\.ejs$/, '.html'),
+      inject: 'body',
+      templateParameters: {}
     })),
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -94,6 +86,6 @@ module.exports = {
     open: true,
     liveReload: true,
     hot: false,
-    watchFiles: ['src/**/*']
+    watchFiles: ['src/**/*'],
   },
-}
+};
