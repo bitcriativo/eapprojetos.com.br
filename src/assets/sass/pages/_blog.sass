@@ -1,0 +1,28 @@
+@use '../abstracts/variables'
+
+.posts__main
+  display: flex
+
+.posts__categories__list
+  list-style: none
+  margin: 0
+  padding: 0
+
+  a
+    text-decoration: none
+    color: variables.$color-secondary
+
+    &:hover
+      color: variables.$color-primary
+
+.posts__tags__list
+  display: flex
+  flex-wrap: wrap
+
+  > * + *
+    margin-left: 8px
+
+.posts__tag
+  padding: 8px
+  background-color: variables.$color-primary
+  color: variables.$color-light

@@ -1,1 +1,2 @@
-import './app.sass';
+import 'bootstrap';
+import './assets/sass/app.sass';

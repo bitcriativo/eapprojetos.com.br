@@ -1,0 +1,36 @@
+$breakpoints: (
+  "xs": 0,       // Extra pequeno - celulares pequenos
+  "sm": 576px,   // Small - celulares
+  "md": 768px,   // Medium - tablets
+  "lg": 992px,   // Large - desktops
+  "xl": 1200px,  // Extra large - desktops grandes
+  "xxl": 1400px  // Extra extra large - TVs ou telas muito grandes
+)
+
+@mixin responsive-min($breakpoint)
+  $value: map-get($breakpoints, $breakpoint)
+  @if $value != null
+    @media (min-width: $value)
+      @content
+
+  @else
+    @warn "Breakpoint `#{$breakpoint}` not defined in $breakpoints."
+
+@mixin responsive-max($breakpoint)
+  $value: map-get($breakpoints, $breakpoint)
+  @if $value != null
+    @media (max-width: $value)
+      @content
+
+  @else
+    @warn "Breakpoint `#{$breakpoint}` not defined in $breakpoints."
+
+@mixin responsive-between($min, $max)
+  $min-val: map-get($breakpoints, $min)
+  $max-val: map-get($breakpoints, $max)
+  @if $min-val != null and $max-val != null
+    @media (min-width: $min-val) and (max-width: $max-val)
+      @content
+
+  @else
+    @warn "One of the breakpoints (`#{$min}`, `#{$max}`) was not set correctly."

@@ -27,6 +27,11 @@ module.exports = {
       }
     ]
   },
+  ignoreWarnings: [
+    {
+      module: /sass-loader/,
+    }
+  ],
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
