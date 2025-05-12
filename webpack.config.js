@@ -4,14 +4,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 require('dotenv').config();
 
-function getEjsFiles(dir, fileList = [], baseDir = dir) {
+// Função para obter arquivos HTML dinamicamente
+function getHtmlFiles(dir, fileList = [], baseDir = dir) {
   const files = fs.readdirSync(dir);
   files.forEach(file => {
     const fullPath = path.join(dir, file);
     const stat = fs.statSync(fullPath);
     if (stat.isDirectory()) {
-      getEjsFiles(fullPath, fileList, baseDir);
-    } else if (file.endsWith('.ejs')) {
+      getHtmlFiles(fullPath, fileList, baseDir); // Recurssão para diretórios
+    } else if (file.endsWith('.html')) {
       const relativePath = path.relative(baseDir, fullPath);
       fileList.push(relativePath);
     }
@@ -19,7 +20,7 @@ function getEjsFiles(dir, fileList = [], baseDir = dir) {
   return fileList;
 }
 
-const ejsFiles = getEjsFiles(path.resolve(__dirname, 'src'));
+const htmlFiles = getHtmlFiles(path.resolve(__dirname, 'src'));
 
 module.exports = {
   mode: process.env.NODE_ENV ?? 'development',
@@ -32,17 +33,6 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.ejs$/,
-        use: [
-          {
-            loader: 'ejs-loader',
-            options: {
-              esModule: false
-            }
-          }
-        ]
-      },
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
@@ -67,9 +57,9 @@ module.exports = {
     }
   ],
   plugins: [
-    ...ejsFiles.map(file => new HtmlWebpackPlugin({
+    ...htmlFiles.map(file => new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', file),
-      filename: file.replace(/\.ejs$/, '.html'),
+      filename: file,
       inject: 'body',
       templateParameters: {}
     })),
