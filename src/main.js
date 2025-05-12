@@ -1,3 +1,6 @@
+import 'bootstrap';
+import './assets/sass/app.sass';
+
 $(function () {
   const buttonTogglerNavbar = $('.navbar-toggler')
   const navbarList = $('.navbar-list')

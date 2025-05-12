@@ -5,7 +5,9 @@
   "scripts": {
     "sass:build": "sass ./assets/sass/app.sass:./assets/css/style.min.css --style compressed",
     "sass:watch": "sass --watch ./assets/sass/app.sass:./assets/css/style.min.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js",
+    "dev": "webpack serve"
   },
   "repository": {
     "type": "git",
@@ -20,9 +22,20 @@
   "homepage": "https://github.com/bitcriativo/bitcriativo.com.br#readme",
   "description": "",
   "devDependencies": {
-    "sass": "^1.87.0"
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "sass": "^1.88.0",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.99.8",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
   },
   "dependencies": {
-    "bootstrap": "^5.3.6"
+    "bootstrap": "^5.3.6",
+    "dotenv": "^16.5.0",
+    "jquery": "^3.7.1"
   }
 }
