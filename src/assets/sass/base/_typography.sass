@@ -37,6 +37,11 @@ $font-scale: (
 .display
   @extend %font-base
   @include font-structure(50px, 200, 64px)
+  background: linear-gradient(270deg, #FFD700 0%, #FFF2BA 35%, #FFF6D2 50%, #FFF2BA 64.9%, #FFD700 100%)
+  background-clip: text
+  font-weight: 400
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
 
 .title
   @extend %font-base
