@@ -1,4 +1,5 @@
 @use '../abstracts/variables'
+@use '../mixins/breakpoints'
 
 .portfolio
   display: flex
@@ -8,3 +9,29 @@
   padding: 20px
   margin: auto
   max-width: variables.$container-max-width
+
+/** Section Portfolio **/
+.portfolio__gallery__img
+  padding: 16px
+  width: 100%
+
+  @include breakpoints.responsive-max('sm')
+    width: 100%
+
+  &:hover
+    scale: 1.05
+    cursor: pointer
+
+.portfolio__gallery__container
+  position: relative
+  background-color: #1C1C1C
+
+  &::before
+    content: ''
+    position: absolute
+    top: -4px
+    left: -4px
+    width: calc(100% + 8px)
+    height: calc(100% + 8px)
+    background: linear-gradient(270deg, #FFD700 0%, #FFF2BA 35%, #FFF6D2 50%, #FFF2BA 64.9%, #FFD700 100%)
+    z-index: -1

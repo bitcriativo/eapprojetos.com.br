@@ -21,13 +21,6 @@
     background-color: darken(variables.$color-primary, 10%) !important
     border-color: darken(variables.$color-primary, 10%) !important
 
-.btn-ghost
-  color: variables.$color-primary
-
-  &:hover
-    border: 1px solid variables.$color-primary
-    border-radius: 0
-
 .btn-card--portfolio
   width: 100%
 
@@ -41,12 +34,34 @@
   border-radius: 0
   position: relative
   background-color: #1C1C1C
+  margin: 8px
 
   &:hover
     background: linear-gradient(270deg, #FFD700 0%, #FFF2BA 35%, #FFF6D2 50%, #FFF2BA 64.9%, #FFD700 100%)
     color: #1C1C1C
 
   &::before
+    content: ''
+    position: absolute
+    top: -4px
+    left: -4px
+    width: calc(100% + 8px)
+    height: calc(100% + 8px)
+    background: linear-gradient(270deg, #FFD700 0%, #FFF2BA 35%, #FFF6D2 50%, #FFF2BA 64.9%, #FFD700 100%)
+    z-index: -1
+
+/* Button Ghost */
+.btn-ghost
+  color: #FFD700
+  background-color: #1C1C1C
+  position: relative
+
+  &:hover
+    border-radius: 0
+    color: #FFD700
+    background-color: #1C1C1C
+
+  &:hover::before
     content: ''
     position: absolute
     top: -4px
