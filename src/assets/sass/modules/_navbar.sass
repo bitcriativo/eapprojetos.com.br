@@ -1,100 +1,88 @@
-@use '../abstracts/variables'
-@use '../base/reset'
-@use '../base/typography' as t
 @use '../mixins/breakpoints'
+@use '../base/reset'
+@use '../base/typography'
 
-$resolution-collapsed-navbar: 'lg'
+$color-link: red
+$color-link-hover: green
+$color-border-hover: red
 
-@mixin nav-list-collapsed
-  position: absolute
-  width: 1px
-  height: 1px
-  padding: 0
-  margin: -1px
-  overflow: hidden
-  clip: rect(0, 0, 0, 0)
-  border: 0
+$breakpoint-nav-collapsed: 'md'
 
-@mixin nav-list-open
-  position: relative
-  width: auto
-  height: auto
-  display: flex
-  flex-direction: column
+$color-button-toggle: red
+$color-button-toggle-hover: gray
+$color-button-toggle-border: green
 
-  .navbar-nav
-    display: flex
-    flex-direction: column !important
+%font
+  @extend .text
 
-    .nav-item
-      width: 100%
+%item-border-active
+  border-bottom: 2px solid $color-border-hover
 
+/*Component Navbar*/
 .navbar
   padding: 8px
 
-  @include breakpoints.responsive-min(sm)
-    padding: 8px 32px
+  @include breakpoints.responsive-max($breakpoint-nav-collapsed)
+    display: block
 
-  @include breakpoints.responsive-max(md)
-    justify-content: initial
-    flex-direction: column
-    text-align: center
+.navbar__nav--collapsed
+  @include breakpoints.responsive-max($breakpoint-nav-collapsed)
+    position: absolute
+    width: 1px
+    height: 1px
+    padding: 0
+    margin: -1px
+    overflow: hidden
+    clip: rect(0, 0, 0, 0)
+    border: 0
 
-.navbar-container
-  @include breakpoints.responsive-max($resolution-collapsed-navbar)
-    display: flex
-    justify-content: space-between
-    width: 100%
-
-.navbar-toggler
-  display: block
-
-  @include breakpoints.responsive-min($resolution-collapsed-navbar)
-    display: none
-
-.navbar-list
+.navbar__nav
+  text-align: center
+  margin: 0px
+  padding: 8px
+  list-style: none
   display: flex
-  flex-grow: 1
-  justify-content: space-between
 
-  @include breakpoints.responsive-max($resolution-collapsed-navbar)
-    padding: 16px 0px
-    flex-direction: column
-    @include nav-list-open
+  > * + *
+    margin-left: 8px
 
-    &.collapsed
-      @include breakpoints.responsive-max($resolution-collapsed-navbar)
-        @include nav-list-collapsed
+    @include breakpoints.responsive-max($breakpoint-nav-collapsed)
+      margin: auto
 
-    > * + *
-      margin-left: 1rem
+  @include breakpoints.responsive-max($breakpoint-nav-collapsed)
+    display: block
 
-.navbar-nav
-  margin-left: auto
-  flex-direction: row
+.nav__item
+  padding: 8px
+  border-bottom: 2px solid transparent
 
-  @include breakpoints.responsive-min($resolution-collapsed-navbar)
-    > * + *
-      margin-left: 1.5rem
+  &:hover
+    cursor: pointer
+    @extend %item-border-active
 
-    .nav-item
-      .nav-link
-        color: variables.$color-secondary
+  &.active
+    @extend %item-border-active
 
-        &:hover
-          color: variables.$color-primary
+.nav__link
+  text-decoration: none
+  color: $color-link
+  @extend %font
 
-.nav-link
-  @extend .text--small-uppercase
+  &:hover
+    color: $color-link-hover
 
-.nav-item.active
-  .nav-link
-    color: variables.$color-primary
+/*Component Button Toggler*/
+.navbar__toggler
+  background-color: $color-button-toggle
+  border: 1px solid $color-button-toggle-border
+  padding: 8px
+  display: none
 
-.nav-btns
-  @include breakpoints.responsive-max($resolution-collapsed-navbar)
-    display: flex
-    flex-direction: column
+  @include breakpoints.responsive-max($breakpoint-nav-collapsed)
+    display: block
 
-    > * + *
-      margin-top: 0.5rem
+  &:hover
+    background-color: $color-button-toggle-hover
+
+  &:active
+    background-color: darken($color-button-toggle-hover, 10%)

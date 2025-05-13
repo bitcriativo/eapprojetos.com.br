@@ -4,14 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 require('dotenv').config();
 
-// Função para obter arquivos HTML dinamicamente
 function getHtmlFiles(dir, fileList = [], baseDir = dir) {
   const files = fs.readdirSync(dir);
   files.forEach(file => {
     const fullPath = path.join(dir, file);
     const stat = fs.statSync(fullPath);
     if (stat.isDirectory()) {
-      getHtmlFiles(fullPath, fileList, baseDir); // Recurssão para diretórios
+      getHtmlFiles(fullPath, fileList, baseDir);
     } else if (file.endsWith('.html')) {
       const relativePath = path.relative(baseDir, fullPath);
       fileList.push(relativePath);
@@ -33,6 +32,25 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(html)$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              sources: {
+                list: [
+                  {
+                    tag: 'img',
+                    attribute: 'src',
+                    type: 'src',
+                  },
+                ],
+              },
+            },
+          },
+        ],
+      },
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],

@@ -2,19 +2,27 @@
 @use '../base/typography'
 
 input
+  all: unset
   @extend .text
-  border: 1px solid variables.$input-color-border
+  background-color: auto
+  border: none
+  border-bottom: 1px solid variables.$input-color-border
   padding: 8px
+  width: 100%
 
   &:focus
-    border: 1px solid variables.$input-color-border
+    border-bottom: 1px solid variables.$input-color-border
     outline-color: variables.$input-color-border-focus
 
-.input
+textarea
+  all: unset
   @extend .text
-  border: 1px solid variables.$input-color-border !important
-  padding: 8px !important
+  background-color: auto
+  border: none
+  border-bottom: 1px solid variables.$input-color-border
+  padding: 8px
+  width: 100%
 
   &:focus
-    border: 1px solid variables.$input-color-border !important
-    outline-color: variables.$input-color-border-focus !important
+    border-bottom: 1px solid variables.$input-color-border
+    outline-color: variables.$input-color-border-focus
