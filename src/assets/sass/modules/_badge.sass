@@ -1,0 +1,15 @@
+.badge--outline
+  position: relative
+  background-color: #1C1C1C
+  border-radius: 0px
+  padding: 8px
+
+  &::before
+    content: ''
+    position: absolute
+    top: -4px
+    left: -4px
+    width: calc(100% + 8px)
+    height: calc(100% + 8px)
+    background: linear-gradient(270deg, #FFD700 0%, #FFF2BA 35%, #FFF6D2 50%, #FFF2BA 64.9%, #FFD700 100%)
+    z-index: -1
