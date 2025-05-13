@@ -4,14 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EAP Projetos | Portfólio pessoal do programador Eduardo Pacheco</title>
+  <title>EAP Projetos | Contato</title>
 
   <!--CSS Vendor-->
   <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
   <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
-
 </head>
 
 <body>
@@ -25,7 +24,7 @@
     </div>
     <div class="navbar__list">
       <ul class="navbar__nav navbar__nav--collapsed">
-        <li class="nav__item active">
+        <li class="nav__item">
           <a class="nav__link" href="/">Início <span class="sr-only">(Atual)</span></a>
         </li>
         <li class="nav__item">
@@ -37,7 +36,7 @@
         <li class="nav__item">
           <a class="nav__link" href="blog/posts.html">Blog</a>
         </li>
-        <li class="nav__item">
+        <li class="nav__item active">
           <a class="nav__link" href="/contato.html">Contato</a>
         </li>
       </ul>
@@ -45,8 +44,7 @@
   </nav>
 
   <div class="container-fluid">
-    <div class="row">
-      <div class="">
+      <div class="layout__aside">
         <aside class="card-avatar">
           <div class="subtitle">
             Eduardo<br />Pacheco
@@ -85,6 +83,9 @@
           </div>
         </aside>
       </div>
+      <div class="layout__main">
+        <!-- Main -->
+        <main class="">
       <main class="main">
         <!-- Contact -->
         <section class="container-fluid mt-5">
@@ -102,23 +103,23 @@
                       <span class="lnr lnr-user"></span>
                     </label>
                   </div>
-            
+      
                   <div class="" data-validate="Valid email is required: ex@abc.xyz">
                     <input class="input100" id="email" type="text" name="email" placeholder="Email">
                     <label class="label-input100" for="email">
                       <span class="lnr lnr-envelope"></span>
                     </label>
                   </div>
-            
+      
                   <div class="" data-validate="Phone is required">
                     <input class="input100" id="phone" type="text" name="phone" placeholder="(99) 99999-9999">
                     <label class="label-input100" for="phone">
                       <span class="lnr lnr-phone-handset"></span>
                     </label>
                   </div>
-            
+      
                   <textarea name="message" placeholder="Sua mensagem..." rows="5"></textarea>
-            
+      
                   <button class="btn btn-primary" type="submit">
                     Enviar
                   </button>
@@ -177,14 +178,14 @@
             </div>
           </div>
         </section>
-
+      
         <!-- FAQ -->
         <section class="row mt-5">
           <div class="col-12">
             <span class="badge text-bg-secondary"><i class="ph ph-sparkle"></i>Portfolio</span>
             <h2 class="title">Confira meus projetos em destaque</h2>
           </div>
-          <div class="row">
+          <div class="row my-5 py-5">
             <div class="col-12 col-xl-6">
               <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
@@ -245,23 +246,27 @@
             </div>
           </div>
         </section>
-    
+
+
+        </main>
+
         <!-- Footer Start -->
         <footer class="container-fluid">
           <address class="row">
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-lg-6 col-xl-4">
               <div class="text--small">Nome: <span class="text--large-bold d-block">Eduardo Pacheco</span></div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-0">
+            <div class="col-12 col-lg-6 col-xl-4 mt-3 mt-md-0">
               <div class="text--small">Telefone: <span class="text--large-bold d-block">+55 91 8556-1718</span></div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-0">
-              <div class="text--small">Email: <span class="text--large-bold d-block">eduardo@eapprojetos.com</span></div>
+            <div class="col-12 col-lg-6 col-xl-4 mt-3 mt-md-0">
+              <div class="text--small">Email: <span class="text--large-bold d-block">eduardo@eapprojetos.com</span>
+              </div>
             </div>
           </address>
         </footer>
-      </main>
-    </div>
+      </div>
   </div>
 </body>
+
 </html>

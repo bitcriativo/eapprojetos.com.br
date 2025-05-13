@@ -1,7 +1,29 @@
+@use '../mixins/breakpoints'
 
-.aside
+.layout__aside
   max-width: 400px
 
-.main
-  max-width: calc( 100dvw - 400px )
-  margin-left: 400px
+  @include breakpoints.responsive-max(sm)
+    max-width: 100%
+
+.layout__main
+  margin-top: 16px
+  margin-left: auto
+  max-width: 100%
+
+  @include breakpoints.responsive-min(sm)
+    margin-top: 16px
+    margin-left: auto
+    max-width: 100%
+
+  @include breakpoints.responsive-min(md)
+    max-width: calc( 100dvw - 200px )
+    margin-left: 200px
+
+  @include breakpoints.responsive-min(lg)
+    max-width: calc( 100dvw - 300px )
+    margin-left: 300px
+
+  @include breakpoints.responsive-min(xl)
+    max-width: calc( 100dvw - 400px )
+    margin-left: 400px
