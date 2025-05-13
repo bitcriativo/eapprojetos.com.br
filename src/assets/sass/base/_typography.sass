@@ -17,6 +17,7 @@ $font-scale: (
   font-size: $size * map-get($font-scale, 'xs')
   font-weight: $weight
   line-height: $line-height * map-get($font-scale, 'xs')
+  color: white
 
   @include breakpoints.responsive-min('sm')
     font-size: $size * map-get($font-scale, 'sm')
@@ -46,6 +47,10 @@ $font-scale: (
 .title
   @extend %font-base
   @include font-structure(34px, 400, 48px)
+  background: linear-gradient(270deg, #FFD700 0%, #FFF2BA 35%, #FFF6D2 50%, #FFF2BA 64.9%, #FFD700 100%)
+  background-clip: text
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
 
 .subtitle
   @extend %font-base
