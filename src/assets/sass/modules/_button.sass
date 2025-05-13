@@ -7,14 +7,16 @@
   text-transform: uppercase
 
 .btn-primary
-  background-color: variables.$color-primary
-  border-color: variables.$color-primary
+  background: linear-gradient(270deg, #FFD700 0%, #FFF2BA 35%, #FFF6D2 50%, #FFF2BA 64.9%, #FFD700 100%)
+  border: none
   border-radius: 0
+  color: #1C1C1C
 
   &:hover
     background-color: darken(variables.$color-primary, 30%)
     border-color: darken(variables.$color-primary, 30%)
-
+    background: linear-gradient(270deg, #FFD700 0%, darken(#FFF2BA, 10%) 35%, darken(#FFF6D2, 10%) 50%, darken(#FFF2BA, 10%) 64.9%, darken(#FFD700, 10%) 100%)
+    color: darken(red, 10%)
   &:active
     background-color: darken(variables.$color-primary, 10%) !important
     border-color: darken(variables.$color-primary, 10%) !important
