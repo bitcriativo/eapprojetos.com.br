@@ -1,12 +1,36 @@
 @use '../abstracts/variables'
+@use '../base/typography'
 
-.accordion-button
-  background-color: variables.$color-light
+.accordion
+  padding: 0
+
+.accordion-item
+  background-color: red
+
+.accordion__button
+  width: 100%
+  background-color: #1C1C1C
+  font-size: 18px
+  text-align: start
+  padding: 12px
+  margin: 0
+  color: white
+  position: relative
 
   &:focus
-    outline: none
-    border: none
-    box-shadow: none
+    width: 100%
+    background-color: transparent
+    font-size: 18px
+    text-align: start
+    margin: 0
+    color: black
 
-  &:active
-    background-color: variables.$color-light
+  &::before
+    content: ''
+    position: absolute
+    top: -4px
+    left: -4px
+    width: calc(100% + 8px)
+    height: calc(100% + 8px)
+    background: linear-gradient(270deg, #FFD700 0%, #FFF2BA 35%, #FFF6D2 50%, #FFF2BA 64.9%, #FFD700 100%)
+    z-index: -1
