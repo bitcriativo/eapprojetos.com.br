@@ -2,8 +2,8 @@
 @use '../base/reset'
 @use '../base/typography'
 
-$color-link: red
-$color-link-hover: green
+$color-link: #FFD700
+$color-link-hover: white
 $color-border-hover: red
 
 $breakpoint-nav-collapsed: 'md'
@@ -16,7 +16,8 @@ $color-button-toggle-border: green
   @extend .text
 
 %item-border-active
-  border-bottom: 2px solid $color-border-hover
+
+  //border-bottom: 2px solid $color-border-hover
 
 /*Component Navbar*/
 .navbar
@@ -42,9 +43,10 @@ $color-button-toggle-border: green
   padding: 8px
   list-style: none
   display: flex
+  text-transform: uppercase
 
   > * + *
-    margin-left: 8px
+    margin-left: 16px
 
     @include breakpoints.responsive-max($breakpoint-nav-collapsed)
       margin: auto
@@ -54,14 +56,34 @@ $color-button-toggle-border: green
 
 .nav__item
   padding: 8px
-  border-bottom: 2px solid transparent
+  background-color: #1C1C1C
+  position: relative
+
+  &:hover::before
+    content: ''
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 100%
+    height: calc(100% + 4px)
+    background-color: green
+    z-index: -1
+    background: linear-gradient(270deg, #FFD700 0%, #FFF2BA 35%, #FFF6D2 50%, #FFF2BA 64.9%, #FFD700 100%)
 
   &:hover
     cursor: pointer
     @extend %item-border-active
 
-  &.active
-    @extend %item-border-active
+  &.active::before
+    content: ''
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 100%
+    height: calc(100% + 4px)
+    background-color: green
+    z-index: -1
+    background: linear-gradient(270deg, #FFD700 0%, #FFF2BA 35%, #FFF6D2 50%, #FFF2BA 64.9%, #FFD700 100%)
 
 .nav__link
   text-decoration: none
@@ -73,16 +95,34 @@ $color-button-toggle-border: green
 
 /*Component Button Toggler*/
 .navbar__toggler
-  background-color: $color-button-toggle
-  border: 1px solid $color-button-toggle-border
+  border: none
+  background-color: #1C1C1C
   padding: 8px
   display: none
+  position: relative
+  color: white
 
   @include breakpoints.responsive-max($breakpoint-nav-collapsed)
-    display: block
+    display: flex
+    align-items: center
+    justify-content: center
 
   &:hover
-    background-color: $color-button-toggle-hover
+    background: linear-gradient(270deg, #FFD700 0%, #FFF2BA 35%, #FFF6D2 50%, #FFF2BA 64.9%, #FFD700 100%)
+    color: #1C1C1C
 
   &:active
     background-color: darken($color-button-toggle-hover, 10%)
+
+  &::before
+    content: ''
+    position: absolute
+    top: -4px
+    left: -4px
+    width: calc(100% + 8px)
+    height: calc(100% + 8px)
+    background: linear-gradient(270deg, #FFD700 0%, #FFF2BA 35%, #FFF6D2 50%, #FFF2BA 64.9%, #FFD700 100%)
+    z-index: -1
+
+  i
+    font-size: 24px
